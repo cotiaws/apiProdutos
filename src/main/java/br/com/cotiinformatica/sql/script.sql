@@ -20,3 +20,13 @@ insert into categoria(id, nome) values(gen_random_uuid(), 'Vestuário');
 insert into categoria(id, nome) values(gen_random_uuid(), 'Outros');
 
 select * from categoria;
+
+SELECT
+	p.id as idproduto, p.nome as nomeproduto, p.preco, p.quantidade,
+	c.id as idcategoria, c.nome as nomecategoria
+FROM produto p
+INNER JOIN categoria c
+ON c.id = p.categoria_id
+WHERE p.nome ILIKE '%Notebook%'
+ORDER BY p.nome;
+	
