@@ -11,9 +11,9 @@ public class ConnectionFactory {
 	public Connection getConnection() {
 		try {
 						
-			var host = "jdbc:postgresql://postgres:5432/apiprodutos";
-			var user = "admin";
-			var pass = "admin123";
+			var host = "jdbc:postgresql://servercoti.postgres.database.azure.com:5432/apiprodutos";
+			var user = "useraula";
+			var pass = "Coti@2025";
 			
 			return DriverManager.getConnection(host, user, pass);
 		}
