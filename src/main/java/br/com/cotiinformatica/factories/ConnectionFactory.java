@@ -11,7 +11,7 @@ public class ConnectionFactory {
 	public Connection getConnection() {
 		try {
 						
-			var host = "jdbc:postgresql://localhost:5436/apiprodutos";
+			var host = "jdbc:postgresql://postgres:5432/apiprodutos";
 			var user = "admin";
 			var pass = "admin123";
 			

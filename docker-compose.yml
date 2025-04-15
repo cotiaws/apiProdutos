@@ -1,5 +1,17 @@
 services:
-  postgres:
+
+   apiprodutos:
+      build:
+         context: .               
+         dockerfile: Dockerfile  
+      container_name: apiprodutos_app
+      restart: always
+      ports:
+         - "8081:8081"
+      depends_on:
+        - postgres  
+
+   postgres:
     image: postgres:latest
     container_name: postgres_db
     restart: always
